@@ -16,7 +16,7 @@ public class SnQ {
     
     public class Stack{   
          Node head;
-         
+          
          //constructor
     Stack()
     {
