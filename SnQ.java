@@ -9,15 +9,31 @@ import javafx.scene.Node;
 
 
 /**
- *
+ * 
  * @author Emoney
  */
 public class SnQ {
     
     public class Stack{
          Node head;
-        
+         
+         //constructor
+    Stack()
+    {
+        this.head = null;
     }
+    //get method for head
+    public Node getHead()
+    {
+        return this.head;
+    }
+    public void setHead(Node newHead)
+    {
+        this.head = newHead;
+    }
+
+    }
+   
     /**
      * @param args the command line arguments
      */
