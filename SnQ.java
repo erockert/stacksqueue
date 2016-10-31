@@ -23,7 +23,7 @@ public class SnQ {
         this.head = null;
     }
     //get method for head
-    public Node getHead()
+    public Node getHead() 
     {
         return this.head;
     }
