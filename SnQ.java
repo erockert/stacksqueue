@@ -14,7 +14,7 @@ import javafx.scene.Node;
  */
 public class SnQ {
     
-    public class Stack{ 
+    public class Stack{  
          Node head;
          
          //constructor
