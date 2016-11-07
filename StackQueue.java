@@ -72,7 +72,7 @@ public class StackQueue
         
         
         
-        
+           
         
         stack.print();
         System.out.println("\nThis is the peek of the stack\n");
