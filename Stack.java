@@ -44,7 +44,7 @@ public class Stack
         {     
            Node next = temp.next;
            temp.next = cur;
-           cur = temp;
+           cur = temp;     
            temp = next;  
         }
         head = cur;
@@ -62,12 +62,12 @@ public class Stack
     }
 
     public void print()
-    {
+    { 
         
        cur = this.head;
         while(cur != null)
         {     
-            System.out.println( cur.lol + "\n-");
+            System.out.println( cur.lol + "\n-"); 
             cur = cur.next;
         } 
     }
