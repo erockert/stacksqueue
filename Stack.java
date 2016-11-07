@@ -50,7 +50,7 @@ public class Stack
         head = cur;
        
     }
-
+      
     public void pop()
      {
          head = head.next;     
