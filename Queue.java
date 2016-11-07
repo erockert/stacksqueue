@@ -3,7 +3,7 @@ public class Queue
 {
     Node head;
     Node cur;
-    Node temp;   
+    Node temp;     
     
     
     public boolean isEmpty()
