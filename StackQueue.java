@@ -3,45 +3,62 @@
 public class StackQueue
 {
     
-     public static Stack stack2stack(Stack oldStack)
+     public static Stack stack2stack(Stack oldS)
     {
-        Stack newStack = new Stack();
-        newStack = oldStack;
-        
-        return newStack;
+       //Initialize the new stack
+        Stack s = new Stack(); 
+        s = oldS;
+        //return the new stack
+        return s;
      }
-    
-   /*  public static Queue stack2queue(Stack oldStack)
+    //queue to stack method "Converts stack to queue"
+    public static Queue stack2queue(Stack s)
     {
-        Queue newQueue = new Queue();
-        newQueue = Queue;
-        
-        return newQueue;
-     }*/
+      //Initialize the new queue
+        Queue q = new Queue();
+        //While the stack isnt empty enqueue 
+        while(!s.isEmpty())
+                {
+          q.enqueue(s.pop());
+                }
+        //return the new queue
+        return q;
+     }
+    //queue to stack method "Converts queue to stack"
+    public static Stack queue2stack(Queue q)
+    {
+      //Initialize the new Stack
+        Stack s = new Stack();
+        //While the queue is not empty push
+         while(!q.isEmpty())
+         {
+           s.push(q.dequeue());
+         }
+         //return the new stack
+        return s;
+    }
     
             public static void main(String[] args) 
     {
         
         Queue queue = new Queue();
-        System.out.println("This is the Queue");
+        System.out.println("This is the Queue\n");
         queue.enqueue(1);
         queue.enqueue(2);
         queue.enqueue(3);
         queue.enqueue(4);
-        
-
         queue.print();
         
+        System.out.println("\n\nDequeue 1 from the queue\n");
         queue.dequeue();
         
         queue.print();
-        
-        System.out.println( queue.peek()) ;
+        System.out.println("\n\nPrinting the peek for the Queue");
+        System.out.println( "\n"+queue.peek()) ;
         
         
         Stack stack = new Stack();
-        System.out.println("");
-        System.out.println("This is where the stack begins");
+        System.out.println("\nThis is where the stack begins\n");
         
         stack.push(1);
         stack.push(2);
@@ -50,7 +67,7 @@ public class StackQueue
         
         stack.printBack();
         stack.print();
-  System.out.println("Removing the 4 from the list");
+  System.out.println("Removing the 4 from the list\n");
         stack.pop();
         
         
@@ -58,13 +75,25 @@ public class StackQueue
         
         
         stack.print();
-
+        System.out.println("\nThis is the peek of the stack\n");
         System.out.println(stack.peek());
         
-        System.out.println("New stack copied over");
-        Stack newStack = new Stack();
-        newStack = stack2stack(stack);
-        newStack.print();
+        System.out.println("\nNew stack copied over\n");
+        Stack s = new Stack();
+        s = stack2stack(stack);
+        s.print();
+        
+        System.out.println("\nConverting the stack to a queue\n");
+        Queue q = new Queue();
+        q = stack2queue(stack);
+        q.print();
+        
+              
+        System.out.println("\n\nConverting the original queue to a stack\n");
+        Stack oldS = new Stack();
+        oldS = queue2stack(queue);
+        oldS.print();
+        
         
     }   
     
